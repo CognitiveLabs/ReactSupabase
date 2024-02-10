@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.react-datetime-picker__inputGroup__input {
+  color: #61dafb;
+}

@@ -8,8 +8,7 @@ import {
 import DateTimePicker from "react-datetime-picker";
 import { useState } from "react";
 import Body from "./components/Body";
-import EnergyForm from "./sliders/EnergyFinal";
-import MorningForm from "./sliders/MorningFinal";
+import CalendarEvent from "./components/CalendarEvent"; // Importing the new component
 import "./styles/main.css"; // Importing the Body component
 
 function App() {
@@ -91,34 +90,21 @@ function App() {
         className="signika-header font-extrabold"
         style={{ maxWidth: "400px", width: "90%", margin: "30px auto" }}
       >
-        {session ? (
-          <>
-            <h2>Hey there {session.user.email}</h2>
-            <p>Start of your event</p>
-            <DateTimePicker onChange={setStart} value={start} />
-            <p>End of your event</p>
-            <DateTimePicker onChange={setEnd} value={end} />
-            <p>Event name</p>
-            <input type="text" onChange={(e) => setEventName(e.target.value)} />
-            <p>Event description</p>
-            <input
-              type="text"
-              onChange={(e) => setEventDescription(e.target.value)}
-            />
-            <hr />
-            <EnergyForm />
-            <MorningForm />
-            <button onClick={() => createCalendarEvent()}>
-              Create Calendar Event
-            </button>
-            <p></p>
-            <button onClick={() => signOut()}>Sign Out</button>
-            <br />
-          </>
-        ) : (
-          <>
-            <button onClick={() => googleSignIn()}>Sign In With Google</button>
-          </>
+        {session && (
+          <CalendarEvent
+            session={session}
+            setStart={setStart}
+            start={start}
+            setEnd={setEnd}
+            end={end}
+            setEventName={setEventName}
+            setEventDescription={setEventDescription}
+            createCalendarEvent={createCalendarEvent}
+            signOut={signOut}
+          />
+        )}
+        {!session && (
+          <button onClick={() => googleSignIn()}>Sign In With Google</button>
         )}
       </div>
     </div>
