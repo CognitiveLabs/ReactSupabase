@@ -7,6 +7,10 @@ import {
 } from "@supabase/auth-helpers-react";
 import DateTimePicker from "react-datetime-picker";
 import { useState } from "react";
+import Body from "./components/Body";
+import EnergyForm from "./sliders/EnergyFinal";
+import MorningForm from "./sliders/MorningFinal";
+import "./styles/main.css"; // Importing the Body component
 
 function App() {
   const [start, setStart] = useState(new Date());
@@ -77,8 +81,16 @@ function App() {
   console.log(eventName);
   console.log(eventDescription);
   return (
-    <div className="App">
-      <div style={{ width: "400px", margin: "30px auto" }}>
+    <div
+      className="App"
+      style={{ maxWidth: "700px", width: "90%", margin: "30px auto" }}
+    >
+      {!session && <Body />}{" "}
+      {/* Render Body only if there is no active session */}
+      <div
+        className="signika-header font-extrabold"
+        style={{ maxWidth: "400px", width: "90%", margin: "30px auto" }}
+      >
         {session ? (
           <>
             <h2>Hey there {session.user.email}</h2>
@@ -94,11 +106,14 @@ function App() {
               onChange={(e) => setEventDescription(e.target.value)}
             />
             <hr />
+            <EnergyForm />
+            <MorningForm />
             <button onClick={() => createCalendarEvent()}>
               Create Calendar Event
             </button>
             <p></p>
             <button onClick={() => signOut()}>Sign Out</button>
+            <br />
           </>
         ) : (
           <>
