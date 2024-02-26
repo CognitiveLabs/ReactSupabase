@@ -1,7 +1,5 @@
 import React from "react";
 import DateTimePicker from "react-datetime-picker";
-import EnergyForm from "../sliders/EnergyFinal";
-import MorningForm from "../sliders/MorningFinal";
 
 const CalendarEvent = ({
   session,
@@ -30,15 +28,10 @@ const CalendarEvent = ({
       <p>End of your event</p>
       <DateTimePicker onChange={setEnd} value={end} />
       <p>Event name</p>
-      <input
-        type="text"
-        value={setEventName}
-        onChange={(e) => setEventName(e.target.value)}
-      />
+      <input type="text" onChange={(e) => setEventName(e.target.value)} />
       <p>Event description</p>
       <input
         type="text"
-        value={setEventDescription}
         onChange={(e) => setEventDescription(e.target.value)}
       />
       <hr />
