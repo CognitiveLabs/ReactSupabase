@@ -1,4 +1,5 @@
 import React from "react";
+import Columns from "./Columns";
 
 const Body = () => {
   return (
@@ -23,8 +24,9 @@ const Body = () => {
         when your <b>imagination</b> is <b>soaring</b>. It's like having a
         <b>personal productivity coach</b> whispering in your ear, guiding you
         towards
-        <b>peak performance</b> hour by hour.
+        <b> peak performance</b> hour by hour.
       </p>
+      <Columns />
     </main>
   );
 };

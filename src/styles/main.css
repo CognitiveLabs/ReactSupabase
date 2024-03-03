@@ -22,13 +22,13 @@ html {
   height: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
-  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+  font-feature-settings: "case" 1, "rlig" 1, "calt" 0;
 }
 
 html,
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
-    'Helvetica', sans-serif, 'Signika', sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
+    "Helvetica", sans-serif, "Signika", sans-serif;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   @apply bg-zinc-800 text-white antialiased;
@@ -94,33 +94,33 @@ a {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap");
 
 @font-face {
-  font-family: 'Signika';
-  src: url('./fonts/static/Signika-Regular.ttf') format('truetype');
+  font-family: "Signika";
+  src: url("./fonts/static/Signika-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Signika';
-  src: url('./fonts/static/Signika-Bold.ttf') format('truetype');
+  font-family: "Signika";
+  src: url("./fonts/static/Signika-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 .signika-title {
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   color: #48bb78;
 }
 
 .signika-orange {
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
 }
 
 .signika {
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   color: #38b6ff;
 }
 
@@ -188,7 +188,7 @@ a {
 }
 
 .signika-header {
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   color: #38b6ff;
 }
 .calendar-container {

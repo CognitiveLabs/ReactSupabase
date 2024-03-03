@@ -84,7 +84,11 @@ function App() {
       className="App"
       style={{ maxWidth: "700px", width: "90%", margin: "30px auto" }}
     >
-      {!session && <Body />}{" "}
+      {!session && (
+        <>
+          <Body />
+        </>
+      )}{" "}
       {/* Render Body only if there is no active session */}
       <div
         className="signika-header font-extrabold"

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -39,4 +43,16 @@
 
 .react-datetime-picker__inputGroup__input {
   color: #61dafb;
+}
+
+.column {
+  margin: 0 10px;
+  flex: 0 0 auto; /* Ensures columns shrink-to-fit on smaller screens */
+  max-width: 320px; /* Adjust as needed */
+}
+
+.blue-column {
+  margin: 0 10px;
+  flex: 0 0 auto; /* Same as above */
+  max-width: 200px; /* Adjust as needed */
 }
