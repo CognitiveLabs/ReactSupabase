@@ -5,12 +5,10 @@ import {
   useSupabaseClient,
   useSessionContext,
 } from "@supabase/auth-helpers-react";
-import DateTimePicker from "react-datetime-picker";
 import { useState } from "react";
 import Body from "./components/Body";
 import CalendarEvent from "./components/CalendarEvent"; // Importing the new component
 import "./styles/main.css";
-import Columns from "./components/Columns";
 
 function App() {
   const [start, setStart] = useState(new Date());
@@ -111,7 +109,6 @@ function App() {
         {!session && (
           <>
             <button onClick={() => googleSignIn()}>Sign In With Google</button>
-            <Columns />
           </>
         )}
       </div>

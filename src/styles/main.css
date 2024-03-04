@@ -19,7 +19,6 @@
 }
 
 html {
-  height: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
   font-feature-settings: "case" 1, "rlig" 1, "calt" 0;
@@ -36,7 +35,6 @@ body {
 
 body {
   position: relative;
-  min-height: 100%;
   margin: 0;
 }
 
