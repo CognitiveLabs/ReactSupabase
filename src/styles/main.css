@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 *,
 *:before,
 *:after {
@@ -11,11 +7,6 @@
 /* Define a custom CSS class for the specific color */
 .ring-custom-blue {
   --ring-color: #38b6ff;
-}
-
-/* Apply the custom class to focused elements */
-*:focus {
-  @apply ring-custom-blue outline-none ring-2 ring-opacity-50;
 }
 
 html {
@@ -30,12 +21,6 @@ body {
     "Helvetica", sans-serif, "Signika", sans-serif;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-zinc-800 text-white antialiased;
-}
-
-body {
-  position: relative;
-  margin: 0;
 }
 
 a {
@@ -91,8 +76,6 @@ a {
     height: 240px; /* Height for mobile */
   }
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap");
 
 @font-face {
   font-family: "Signika";
