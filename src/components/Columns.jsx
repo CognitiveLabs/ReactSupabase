@@ -1,4 +1,4 @@
-import "../styles/main.css"; // Importing the Body component
+import "../App.css";
 
 export default function Columns() {
   return (

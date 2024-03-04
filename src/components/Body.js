@@ -1,5 +1,4 @@
 import React from "react";
-import Columns from "./Columns";
 
 const Body = () => {
   return (
@@ -26,7 +25,6 @@ const Body = () => {
         towards
         <b> peak performance</b> hour by hour.
       </p>
-      <Columns />
     </main>
   );
 };
